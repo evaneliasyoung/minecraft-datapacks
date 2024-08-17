@@ -1,0 +1,10 @@
+{
+  "importOrder": ["^bun", "<THIRD_PARTY_MODULES>", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "plugins": ["prettier-plugin-packagejson", "@trivago/prettier-plugin-sort-imports"],
+  "printWidth": 120,
+  "semi": false,
+  "tabWidth": 2,
+  "useTabs": false
+}
