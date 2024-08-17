@@ -1,0 +1,17 @@
+{
+  "display": {
+    "title": "Unpackable Ice",
+    "description": "Decompress ice variants! v1.0",
+    "icon": {
+      "item": "minecraft:string"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "global:britishmystery",
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

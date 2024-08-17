@@ -1,0 +1,13 @@
+{
+  "type": "crafting_shapeless",
+  "group": "string",
+  "result": {
+    "item": "minecraft:string",
+    "count": 4
+  },
+  "ingredients": [
+    {
+      "tag": "minecraft:wool"
+    }
+  ]
+}
