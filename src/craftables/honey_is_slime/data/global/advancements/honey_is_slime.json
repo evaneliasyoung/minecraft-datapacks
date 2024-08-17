@@ -1,0 +1,17 @@
+{
+  "display": {
+    "title": "Honey is Slime",
+    "description": "Craft with honey like you would slime! v1.0",
+    "icon": {
+      "item": "minecraft:honey_bottle"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "global:britishmystery",
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

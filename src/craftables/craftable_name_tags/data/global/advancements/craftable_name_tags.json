@@ -1,0 +1,17 @@
+{
+  "display": {
+    "title": "Craftable Name Tags",
+    "description": "Craft name tags! v1.0",
+    "icon": {
+      "item": "minecraft:name_tag"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "global:britishmystery",
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

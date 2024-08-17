@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bundle",
+  "key": {
+    "L": { "item": "minecraft:leather" },
+    "S": { "item": "minecraft:string" }
+  },
+  "pattern": ["SLS", "L L", "LLL"],
+  "result": {
+    "item": "minecraft:bundle"
+  }
+}
