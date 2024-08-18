@@ -73,6 +73,7 @@ const INCREMENT_PACK_FMT_VERSIONS = new Set([
   "1.21-pre1",
   "1.21-pre2",
   "1.21-pre3",
+  "24w33a"
 ])
 
 const mapVersionManifest = ({ latest: rawLatest, versions: rawVersions }: VersionManifest<true>): VersionManifest => {

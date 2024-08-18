@@ -20,7 +20,7 @@ declare namespace Minecraft {
   }
 
   namespace DataPack {
-    type Format = IntRange<4, 28>
+    type Format = IntRange<4, 50>
 
     type FormatRange = Format | [Format, Format] | { min_inclusive: Format; max_inclusive: Format }
   }
