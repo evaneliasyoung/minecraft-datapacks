@@ -18,7 +18,7 @@ export async function syncPack(pack: Pack) {
   const patchFiles = async (...patches: [string[], object][]) =>
     await Promise.all(patches.map(([parts, data]) => writeObject(join(pack.root, ...parts), data)))
 
-  const advancementPath = ["data", "global", "advancements"]
+  const advancementPath = ["data", "global", "advancement"]
   const [root, namespace, base] = await createAdvancements(pack)
 
   await patchFiles(

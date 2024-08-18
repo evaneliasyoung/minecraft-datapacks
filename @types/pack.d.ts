@@ -6,8 +6,8 @@ declare type PackConfig = {
   title: string
   description: Minecraft.TextComponent
   icon: {
-    item: string
-    nbt?: string
+    id: string
+    components?: object
   }
   engine: Minecraft.Version | Minecraft.Version.Tag
   supports?: Minecraft.DataPack.FormatRange
@@ -21,8 +21,8 @@ declare type Pack = {
   title: string
   description: Minecraft.TextComponent
   icon: {
-    item: string
-    nbt?: string
+    id: string
+    components?: object
   }
   format: Minecraft.DataPack.Format
   supports?: Minecraft.DataPack.FormatRange

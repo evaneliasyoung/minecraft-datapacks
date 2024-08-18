@@ -4,7 +4,7 @@ export const testConfig: PackConfig = {
   title: "Test",
   description: "testing things",
   icon: {
-    item: "minecraft:dirt",
+    id: "minecraft:dirt",
   },
   engine: "@release",
 }
@@ -15,7 +15,7 @@ export const testPack = {
   title: "Test",
   description: "testing things v0.1",
   icon: {
-    item: "minecraft:dirt",
+    id: "minecraft:dirt",
   },
   format: 26,
 } as Pack

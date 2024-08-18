@@ -3,8 +3,10 @@
     "title": "BritishMystery",
     "description": "",
     "icon": {
-      "item": "minecraft:player_head",
-      "nbt": "{SkullOwner: \"BritishMystery\"}"
+      "id": "minecraft:player_head",
+      "components": {
+        "profile": { "name": "BritishMystery" }
+      }
     },
     "show_toast": false,
     "announce_to_chat": false

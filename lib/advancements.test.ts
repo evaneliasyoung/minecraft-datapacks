@@ -10,7 +10,7 @@ describe("advancements", () => {
         title: "Installed Datapacks",
         description: "",
         icon: {
-          item: "minecraft:knowledge_book",
+          id: "minecraft:knowledge_book",
         },
         background: "minecraft:textures/block/gray_concrete.png",
         show_toast: false,

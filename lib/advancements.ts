@@ -23,7 +23,7 @@ export const createRootAdvancement = async ({ assets }: Pack) =>
       title: "Installed Datapacks",
       description: "",
       icon: {
-        item: "minecraft:knowledge_book",
+        id: "minecraft:knowledge_book",
       },
       background: "minecraft:textures/block/gray_concrete.png",
       ...DISPLAY_BASE,
@@ -37,8 +37,7 @@ export const createNamespaceAdvancement = async ({ assets, namespace }: Pack) =>
       title: "Minecraft Username",
       description: "",
       icon: {
-        item: "minecraft:player_head",
-        nbt: `{Id:[682268746,544686284,-1914182079,-1376598889],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDZiYTYzMzQ0ZjQ5ZGQxYzRmNTQ4OGU5MjZiZjNkOWUyYjI5OTE2YTZjNTBkNjEwYmI0MGE1MjczZGM4YzgyIn19fQ=="}]}}`,
+        id: "minecraft:player_head",
       },
       parent: "global:root",
       ...DISPLAY_BASE,
