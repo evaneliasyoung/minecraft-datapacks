@@ -1,10 +1,10 @@
 export default {
   id: "@britishmystery/unpackable_ice",
-  version: "1.0",
+  version: "1.1",
   title: "Unpackable Ice",
   description: "Decompress ice variants!",
   icon: {
-    item: "minecraft:string",
+    id: "minecraft:ice",
   },
   engine: "@release",
 } satisfies PackConfig

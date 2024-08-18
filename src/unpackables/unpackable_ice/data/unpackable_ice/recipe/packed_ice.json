@@ -3,7 +3,7 @@
   "group": "ice",
   "ingredients": [{ "item": "minecraft:blue_ice" }],
   "result": {
-    "item": "minecraft:packed_ice",
+    "id": "minecraft:packed_ice",
     "count": 9
   }
 }
