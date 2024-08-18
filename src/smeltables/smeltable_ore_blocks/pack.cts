@@ -1,10 +1,10 @@
 export default {
   id: "@britishmystery/smeltable_ore_blocks",
-  version: "1.0",
+  version: "1.1",
   title: "Smeltable Ore Blocks",
   description: "Smelt ores in bulk!",
   icon: {
-    item: "minecraft:raw_iron_block",
+    id: "minecraft:raw_iron_block",
   },
   engine: "@release",
 } satisfies PackConfig
