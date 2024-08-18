@@ -1,6 +1,6 @@
 export default {
   id: "@britishmystery/craftable_name_tags",
-  version: "1.",
+  version: "1.1",
   title: "Craftable Name Tags",
   description: "Craft name tags!",
   icon: {
