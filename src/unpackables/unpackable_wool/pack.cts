@@ -1,8 +1,8 @@
 export default {
   id: "@britishmystery/unpackable_wool",
-  version: "1.0",
+  version: "1.1",
   title: "Unpackable Wool",
   description: "Decompress wool into string!",
-  icon: { item: "minecraft:string" },
+  icon: { id: "minecraft:string" },
   engine: "@release",
 } satisfies PackConfig
