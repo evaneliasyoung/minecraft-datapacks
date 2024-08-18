@@ -3,6 +3,7 @@
 @types/version.d.ts
 assets/version-manifest.json
 pack.mcmeta
+**/data/global/advancement/*.json
 
 # Logs
 
