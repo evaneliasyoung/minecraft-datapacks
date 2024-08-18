@@ -13,4 +13,4 @@ const program = new Command("sync").description("syncs pack.cts to datapack cont
     console.log(`synced ${pack.codename}`)
   }
 })
-program.parse()
+program.parseAsync()

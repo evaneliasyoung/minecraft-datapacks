@@ -132,4 +132,4 @@ const program = new Command("update-version-manifest")
 
     console.log("Success! updated manifest and types")
   })
-program.parse()
+program.parseAsync()
