@@ -1,8 +1,8 @@
 {
-  "type": "crafting_shapeless",
+  "type": "minecraft:crafting_shapeless",
   "group": "dispenser",
   "result": {
-    "item": "minecraft:dispenser",
+    "id": "minecraft:dispenser",
     "count": 1
   },
   "ingredients": [

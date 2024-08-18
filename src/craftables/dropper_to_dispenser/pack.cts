@@ -1,10 +1,10 @@
 export default {
   id: "@britishmystery/dropper_to_dispenser",
-  version: "1.0",
+  version: "1.1",
   title: "Dropper to Dispenser",
   description: "Craft dispensers from droppers!",
   icon: {
-    item: "minecraft:dispener",
+    id: "minecraft:dispenser",
   },
   engine: "@release",
 } satisfies PackConfig
