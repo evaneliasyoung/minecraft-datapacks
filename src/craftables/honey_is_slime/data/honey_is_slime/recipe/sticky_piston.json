@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "sticky_piston",
+  "result": {
+    "id": "minecraft:sticky_piston"
+  },
+  "ingredients": [{ "item": "minecraft:piston" }, { "tag": "honey_is_slime:sticky" }]
+}

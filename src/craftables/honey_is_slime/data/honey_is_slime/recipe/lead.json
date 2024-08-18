@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "group": "lead",
   "key": {
-    "H": { "item": "minecraft:honey_bottle" },
+    "H": { "tag": "honey_is_slime:sticky" },
     "S": { "item": "minecraft:string" }
   },
   "pattern": ["SSS", "SH ", "  S"],
   "result": {
-    "item": "minecraft:lead"
+    "id": "minecraft:lead"
   }
 }
