@@ -3,7 +3,6 @@ import { createReadStream, createWriteStream } from "fs"
 import { join } from "path"
 
 import { createAdvancements } from "./advancements"
-import type { Logger } from "./logger"
 import { reflectMeta } from "./meta"
 
 export const writeObject = async (path: string, object: object) =>
@@ -24,38 +23,24 @@ export async function syncPack(pack: Pack) {
   )
 }
 
-export async function zipPack(pack: Pack, logger: Logger): Promise<void> {
-  const filename = `${pack.codename}.zip`
-  const output = createWriteStream(`./dist/${filename}`)
-  const archive = archiver("zip", {
-    zlib: { level: 9 },
+export async function zipPack(pack: Pack): Promise<number> {
+  return new Promise((resolve, reject) => {
+    const filename = `${pack.codename}.zip`
+    const output = createWriteStream(`./dist/${filename}`)
+    const archive = archiver("zip", {
+      zlib: { level: 9 },
+    })
+
+    output.on("close", () => resolve(archive.pointer()))
+    archive.on("warning", reject)
+    archive.on("error", reject)
+
+    archive.pipe(output)
+
+    const glob = new Bun.Glob("**/*")
+    const scannedFiles = glob.scanSync({ absolute: true, cwd: pack.root })
+    for (const path of scannedFiles) archive.append(createReadStream(path), { name: path.replace(pack.root, "") })
+
+    archive.finalize()
   })
-
-  output.on("close", function () {
-    let size = archive.pointer()
-    let add = "B"
-    if (size > 1024) [size, add] = [size / 1024, "KB"]
-    if (size > 1024) [size, add] = [size / 1024, "MB"]
-    if (size > 1024) [size, add] = [size / 1024, "GB"]
-
-    logger.log(`wrote ${size.toFixed(2)} ${add} to ${filename}`)
-  })
-
-  output.on("end", () => logger.log("Data has been drained"))
-
-  archive.on("warning", (err) => {
-    throw err
-  })
-
-  archive.on("error", (err) => {
-    throw err
-  })
-
-  archive.pipe(output)
-
-  for await (const res of new Bun.Glob("**/*").scan({ absolute: true, cwd: pack.root })) {
-    archive.append(createReadStream(res), { name: res.replace(pack.root, "") })
-  }
-
-  await archive.finalize()
 }
