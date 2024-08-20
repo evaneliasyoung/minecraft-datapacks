@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "quartz",
+  "ingredients": [{ "tag": "unpackable_quartz:quartz_slabs" }],
+  "result": {
+    "id": "minecraft:quartz",
+    "count": 2
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "quartz",
+  "ingredients": [{ "tag": "unpackable_quartz:quartz_stairs" }],
+  "result": {
+    "id": "minecraft:quartz",
+    "count": 3
+  }
+}
