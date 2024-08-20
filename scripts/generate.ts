@@ -24,4 +24,4 @@ const program = new Command("generate")
       { createPath: true },
     )
   })
-  program.parseAsync()
+program.parseAsync()
