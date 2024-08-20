@@ -1,6 +1,6 @@
 export default {
   id: "@britishmystery/unpackable_ice",
-  version: "1.1",
+  version: "1.20(.1)",
   title: "Unpackable Ice",
   description: "Decompress ice variants!",
   icon: {
