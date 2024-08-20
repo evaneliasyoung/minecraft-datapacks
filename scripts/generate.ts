@@ -1,8 +1,6 @@
 import { Command } from "commander"
 import { basename, join } from "path"
 
-import { format } from "../lib/build"
-
 const generatePackConfig = (directory: string, options?: Partial<PackConfig>) => ({
   id: options?.id ?? `@namespace/${basename(directory)}`,
   version: options?.version ?? "0.0.1",
@@ -20,7 +18,7 @@ const program = new Command("generate")
   .action(async (directory) => {
     Bun.write(
       join(directory, "pack.cts"),
-      await format(`export default ${JSON.stringify(generatePackConfig(directory))} satisfies PackConfig`),
+      `export default ${JSON.stringify(generatePackConfig(directory))} satisfies PackConfig`,
       { createPath: true },
     )
   })

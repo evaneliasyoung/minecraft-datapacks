@@ -1,18 +1,13 @@
 import archiver from "archiver"
 import { createReadStream, createWriteStream } from "fs"
 import { join } from "path"
-import { type BuiltInParserName, type LiteralUnion, format as prettierFormat } from "prettier"
 
-import prettier from "../.prettierrc"
 import { createAdvancements } from "./advancements"
 import type { Logger } from "./logger"
 import { reflectMeta } from "./meta"
 
-export const format = async (code: string, parser?: LiteralUnion<BuiltInParserName>) =>
-  await prettierFormat(code, { ...prettier, plugins: [], parser: parser ?? "typescript" })
-
 export const writeObject = async (path: string, object: object) =>
-  await Bun.write(path, await format(JSON.stringify(object, undefined, 2), "json"), { createPath: true })
+  await Bun.write(path, JSON.stringify(object, undefined, 2), { createPath: true })
 
 export async function syncPack(pack: Pack) {
   const patchFiles = async (...patches: [string[], object][]) =>
