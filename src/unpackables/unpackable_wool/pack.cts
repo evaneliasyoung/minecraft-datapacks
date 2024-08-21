@@ -1,5 +1,5 @@
 export default {
-  id: "@britishmystery/unpackable_wool",
+  id: "@britishmystery/unpackables/unpackable_wool",
   version: "1.20(.1)",
   title: "Unpackable Wool",
   description: "Decompress wool into string!",

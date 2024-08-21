@@ -1,0 +1,18 @@
+{
+  "display": {
+    "title": "Craftables",
+    "description": "Adds 'missing' recipes",
+    "icon": {
+      "id": "minecraft:crafting_table"
+    },
+    "frame": "goal",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "global:britishmystery",
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

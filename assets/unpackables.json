@@ -1,0 +1,18 @@
+{
+  "display": {
+    "title": "Unpackables",
+    "description": "Unpack your compressed blocks",
+    "icon": {
+      "id": "minecraft:piston"
+    },
+    "frame": "goal",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "global:britishmystery",
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 export default {
-  id: "@britishmystery/smeltable_rotten_flesh",
+  id: "@britishmystery/smeltables/smeltable_rotten_flesh",
   version: "1.20(.1)",
   title: "Smeltable Rotten Flesh",
   description: "Smelt rotten flesh!",

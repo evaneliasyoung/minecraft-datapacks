@@ -1,5 +1,5 @@
 export default {
-  id: "@britishmystery/unpackable_nether_wart",
+  id: "@britishmystery/unpackables/unpackable_nether_wart",
   version: "1.20(.1)",
   title: "Unpackable Nether Wart",
   description: "Decompress nether wart blocks!",

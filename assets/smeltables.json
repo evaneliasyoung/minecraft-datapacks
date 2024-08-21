@@ -1,0 +1,18 @@
+{
+  "display": {
+    "title": "Smeltables",
+    "description": "Additional smelting options",
+    "icon": {
+      "id": "minecraft:furnace"
+    },
+    "frame": "goal",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "global:britishmystery",
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

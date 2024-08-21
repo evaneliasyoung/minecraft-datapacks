@@ -1,0 +1,18 @@
+{
+  "display": {
+    "title": "QoL",
+    "description": "Quality of Life changes",
+    "icon": {
+      "id": "minecraft:totem_of_undying"
+    },
+    "frame": "goal",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "global:britishmystery",
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}
