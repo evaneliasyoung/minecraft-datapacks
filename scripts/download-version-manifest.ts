@@ -1,6 +1,6 @@
 import { Command } from "commander"
 
-import { format, writeObject } from "../lib/build"
+import { writeObject } from "../lib/build"
 
 const SOURCE = "https://piston-meta.mojang.com/mc/game/version_manifest_v2.json"
 
@@ -92,7 +92,7 @@ const mapVersionManifest = ({ latest: rawLatest, versions: rawVersions }: Versio
   }
 }
 
-async function makeVersionTypeDeclarations({ latest, versions }: VersionManifest) {
+function makeVersionTypeDeclarations({ latest, versions }: VersionManifest) {
   const releases = versions.filter(({ type }) => type === "release").map(({ id }) => id)
   const snapshots = versions.filter(({ type }) => type === "snapshot").map(({ id }) => id)
 
@@ -113,7 +113,7 @@ async function makeVersionTypeDeclarations({ latest, versions }: VersionManifest
     `}`,
   ]
 
-  return await format(versionTypings.join("\n"))
+  return versionTypings.join("\n")
 }
 
 const program = new Command("update-version-manifest")
@@ -126,7 +126,7 @@ const program = new Command("update-version-manifest")
     const versionManifest = mapVersionManifest(rawVersionManifest)
 
     await Promise.all([
-      Bun.write("./@types/version.d.ts", await makeVersionTypeDeclarations(versionManifest), { createPath: true }),
+      Bun.write("./@types/version.d.ts", makeVersionTypeDeclarations(versionManifest), { createPath: true }),
       writeObject("./assets/version-manifest.json", versionManifest),
     ])
 
