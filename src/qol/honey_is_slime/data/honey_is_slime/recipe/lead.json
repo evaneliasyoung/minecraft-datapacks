@@ -5,8 +5,9 @@
     "H": { "tag": "honey_is_slime:sticky" },
     "S": { "item": "minecraft:string" }
   },
-  "pattern": ["SSS", "SH ", "  S"],
+  "pattern": ["SS ", "SH ", "  S"],
   "result": {
-    "id": "minecraft:lead"
+    "id": "minecraft:lead",
+    "count": 2
   }
 }
