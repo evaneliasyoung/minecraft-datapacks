@@ -6,6 +6,7 @@ import { testConfig, testPack } from "./test-config"
 describe("config", () => {
   it("should detect valid ids", () => {
     expect(isPackID("@namespace/test")).toBeTruthy()
+    expect(isPackID("@namespace/group/test")).toBeTruthy()
   })
   it("should detect invalid ids", () => {
     expect(isPackID("namespace.test")).toBeFalsy()
@@ -13,6 +14,7 @@ describe("config", () => {
 
   it("should reflect valid ids", () => {
     expect(reflectID("@namespace/test")).toEqual(["namespace", "test"])
+    expect(reflectID("@namespace/group/test")).toEqual(["namespace", "group", "test"])
   })
 
   it("should fail to reflect invalid ids", () => {

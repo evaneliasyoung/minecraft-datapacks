@@ -13,14 +13,18 @@ export async function syncPack(pack: Pack) {
     await Promise.all(patches.map(([parts, data]) => writeObject(join(pack.root, ...parts), data)))
 
   const advancementPath = ["data", "global", "advancement"]
-  const [root, namespace, base] = await createAdvancements(pack)
+  const [root, namespace, group, base] = await createAdvancements(pack)
 
-  await patchFiles(
+  const filesToPatch = [
     [["pack.mcmeta"], reflectMeta(pack)],
     [[...advancementPath, "root.json"], root],
     [[...advancementPath, `${pack.namespace}.json`], namespace],
     [[...advancementPath, `${pack.codename}.json`], base],
-  )
+  ] as [string[], Minecraft.Advancement][]
+
+  if (group) filesToPatch.push([[...advancementPath, `${pack.group}.json`], group] as const)
+
+  await patchFiles(...filesToPatch)
 }
 
 export async function zipPack(pack: Pack): Promise<number> {

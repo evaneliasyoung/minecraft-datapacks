@@ -1,4 +1,4 @@
-declare type PackID = `@${string}/${string}`
+declare type PackID = `@${string}/${string}` | `@${string}/${string}/${string}`
 
 declare type PackConfig = {
   id: PackID
@@ -16,6 +16,7 @@ declare type PackConfig = {
 declare type Pack = {
   root: string
   assets?: string
+  group?: string
   namespace: string
   codename: string
   title: string

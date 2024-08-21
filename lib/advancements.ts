@@ -48,17 +48,44 @@ export const createNamespaceAdvancement = async ({ assets, namespace }: Pack): P
     criteria,
   }
 
-export const createPackAdvancement = async ({ title, description, icon, namespace }: Pack) => ({
+export const createGroupAdvancement = async ({
+  assets,
+  group,
+  namespace,
+}: Pack): Promise<Minecraft.Advancement | undefined> =>
+  group
+    ? ((await reflectIfExists(assets, `${group}.json`)) ?? {
+        parent: `global:${namespace}`,
+        display: {
+          title: group,
+          description: "",
+          icon: {
+            id: "minecraft:book",
+          },
+          ...DISPLAY_BASE,
+        },
+        criteria,
+      })
+    : undefined
+
+export const createPackAdvancement = async ({
+  title,
+  description,
+  icon,
+  namespace,
+  group,
+}: Pack): Promise<Minecraft.Advancement> => ({
   display: { title, description, icon, ...DISPLAY_BASE },
-  parent: `global:${namespace}`,
+  parent: `global:${group ?? namespace}`,
   criteria,
 })
 
 export const createAdvancements = async (
   pack: Pack,
-): Promise<[Minecraft.Advancement, Minecraft.Advancement, Minecraft.Advancement]> =>
+): Promise<[Minecraft.Advancement, Minecraft.Advancement, Minecraft.Advancement | undefined, Minecraft.Advancement]> =>
   await Promise.all([
     createRootAdvancement(pack),
     createNamespaceAdvancement(pack),
+    createGroupAdvancement(pack),
     createPackAdvancement(pack),
   ])
