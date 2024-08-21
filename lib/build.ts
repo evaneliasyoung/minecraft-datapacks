@@ -9,7 +9,7 @@ export const writeObject = async (path: string, object: object) =>
   await Bun.write(path, JSON.stringify(object, undefined, 2), { createPath: true })
 
 export async function syncPack(pack: Pack) {
-  const patchFiles = async (...patches: [string[], object][]) =>
+  const patchFiles = async (...patches: [string[], Minecraft.Advancement][]) =>
     await Promise.all(patches.map(([parts, data]) => writeObject(join(pack.root, ...parts), data)))
 
   const advancementPath = ["data", "global", "advancement"]
