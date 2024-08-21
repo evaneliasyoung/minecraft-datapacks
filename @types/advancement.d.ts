@@ -17,12 +17,14 @@ declare namespace Minecraft {
       }
       title: Minecraft.TextComponent
       description: Minecraft.TextComponent
-      frame?: string
+      frame?: Frame
       background?: string
       show_toast?: boolean
       announce_to_chat?: boolean
       hidden?: boolean
     }
+
+    type Frame = "challenge" | "goal" | "task"
 
     type Criteria = {
       trigger: string
