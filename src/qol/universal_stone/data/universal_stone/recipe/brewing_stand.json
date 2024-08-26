@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": {
+      "tag": "universal_stone:cobbles"
+    },
+    "/": {
+      "item": "minecraft:blaze_rod"
+    }
+  },
+  "pattern": [" / ", "CCC"],
+  "result": {
+    "id": "minecraft:brewing_stand"
+  },
+  "group": "brewing_stand"
+}

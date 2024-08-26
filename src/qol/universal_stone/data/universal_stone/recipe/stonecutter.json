@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "tag": "universal_stone:stones"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [" I ", "SSS"],
+  "result": {
+    "id": "minecraft:stonecutter"
+  },
+  "group": "stonecutter"
+}

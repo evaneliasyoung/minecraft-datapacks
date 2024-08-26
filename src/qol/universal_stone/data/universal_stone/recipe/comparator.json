@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "tag": "universal_stone:stones"
+    },
+    "/": {
+      "item": "minecraft:redstone_torch"
+    },
+    "Q": {
+      "item": "minecraft:quartz"
+    }
+  },
+  "pattern": [" / ", "/Q/", "SSS"],
+  "result": {
+    "id": "minecraft:comparator"
+  },
+  "group": "comparator"
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": {
+      "tag": "universal_stone:cobbles"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": ["/", "C"],
+  "result": {
+    "id": "minecraft:lever"
+  },
+  "group": "lever"
+}

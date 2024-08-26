@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "tag": "universal_stone:stones"
+    },
+    "/": {
+      "item": "minecraft:redstone_torch"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": ["/R/", "SSS"],
+  "result": {
+    "id": "minecraft:repeater"
+  },
+  "group": "repeater"
+}

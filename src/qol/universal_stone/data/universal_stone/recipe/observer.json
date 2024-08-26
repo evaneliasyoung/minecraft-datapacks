@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "Q": {
+      "item": "minecraft:quartz"
+    },
+    "C": {
+      "tag": "universal_stone:cobbles"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": ["CCC", "RRQ", "CCC"],
+  "result": {
+    "id": "minecraft:observer"
+  },
+  "group": "observer"
+}
