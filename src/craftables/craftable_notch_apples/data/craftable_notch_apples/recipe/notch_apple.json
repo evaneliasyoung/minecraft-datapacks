@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:gold_block"
+    },
+    "A": {
+      "item": "minecraft:apple"
+    }
+  },
+  "pattern": ["###", "#A#", "###"],
+  "result": {
+    "id": "minecraft:enchanted_golden_apple"
+  },
+  "group": "notch_apple"
+}
