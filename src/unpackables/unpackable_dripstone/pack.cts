@@ -4,7 +4,7 @@ export default {
   title: "Unpackable Dripstone",
   description: "Decompress dripstone blocks!",
   icon: {
-    id: "minecraft:dripstone_block",
+    id: "minecraft:pointed_dripstone",
   },
   engine: "@release",
 } satisfies PackConfig
