@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "dripstone",
+  "ingredients": [{ "item": "minecraft:clay" }],
+  "result": {
+    "id": "minecraft:clay_ball",
+    "count": 4
+  }
+}
