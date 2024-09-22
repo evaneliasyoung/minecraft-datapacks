@@ -25,14 +25,14 @@
     "@types/bun": "latest",
     "@types/commander": "^2.12.2",
     "@types/semver": "^7.5.8",
-    "eslint": "^9.9.0",
+    "eslint": "^9.11.0",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.3.3",
-    "prettier-plugin-packagejson": "^2.5.1",
-    "typescript-eslint": "^8.2.0"
+    "prettier-plugin-packagejson": "^2.5.2",
+    "typescript-eslint": "^8.6.0"
   },
   "peerDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.5.4"
   },
   "mcpacker": {}
 }
