@@ -1,0 +1,11 @@
+{
+  "type": "crafting_shaped",
+  "key": {
+    "#": { "tag": "logs" }
+  },
+  "pattern": ["###", "# #", "###"],
+  "result": {
+    "id": "chest",
+    "count": 4
+  }
+}
